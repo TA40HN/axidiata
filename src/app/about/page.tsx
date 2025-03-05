@@ -1,5 +1,6 @@
 "use client";
 
+// Import directly from the component files
 import { BrandStory } from "../../../components/about/BrandStory";
 import { DesignerInfo } from "../../../components/about/DesignerInfo";
 import { Values } from "../../../components/about/Values";

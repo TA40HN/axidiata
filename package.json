@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "cloudflare-build": "bash ./build.sh"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",

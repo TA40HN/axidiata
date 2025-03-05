@@ -1,20 +1,26 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+// Next.js Middleware
+// This file helps with processing requests
+// Learn more: https://nextjs.org/docs/app/building-your-application/routing/middleware
 
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+// This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-  // Add custom headers for security
-  const response = NextResponse.next();
-  
-  // Add security headers
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
-  return response;
+  // Continue with the request
+  return NextResponse.next()
 }
 
-// Specify which paths this middleware will run on
+// Specifies paths for the middleware to run on
 export const config = {
-  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)',
-};
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+}
