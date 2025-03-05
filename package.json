@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "type-check": "tsc --noEmit",
-    "cloudflare-build": "next build --no-lint"
+    "cloudflare-build": "NEXT_MINIMIZE=true next build --no-lint"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",
