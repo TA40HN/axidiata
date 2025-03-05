@@ -1,8 +1,8 @@
 "use client";
 
-import { BrandStory } from "@/components/about/BrandStory";
-import { DesignerInfo } from "@/components/about/DesignerInfo";
-import { Values } from "@/components/about/Values";
+import { BrandStory } from "../../../components/about/BrandStory";
+import { DesignerInfo } from "../../../components/about/DesignerInfo";
+import { Values } from "../../../components/about/Values";
 import { motion } from "framer-motion";
 
 export default function AboutPage() {

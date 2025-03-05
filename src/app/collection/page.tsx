@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import {
   CollectionFilter,
   FilterOption,
-} from "@/components/collection/CollectionFilter";
-import { CollectionCard } from "@/components/collection/CollectionCard";
-import { ProductDetails } from "@/components/collection/ProductDetails";
+} from "../../../components/collection/CollectionFilter";
+import { CollectionCard } from "../../../components/collection/CollectionCard";
+import { ProductDetails } from "../../../components/collection/ProductDetails";
 
 const filterOptions: FilterOption[] = [
   { id: "1", label: "All", value: "all" },
